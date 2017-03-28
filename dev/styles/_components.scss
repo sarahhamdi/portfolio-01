@@ -7,6 +7,7 @@
   @include padding-margin(1rem 1.5rem, .5rem 1rem .5rem 0);
   background: $black;
   border: none; 
+  box-shadow: $box-shadow;
 }
 
 .section-portfolio--article-links {
@@ -33,7 +34,8 @@
   }
   label {
     // color: rgba(29, 47, 69, 1);
-    color: #500d3e;
+    // color: #500d3e;
+    color: $black;
     font-family: $font-family--body;
     position: absolute;
     left: 14px;
@@ -49,10 +51,11 @@
     border: 0;
     margin: 8px 0;
     padding: 25px 10px 8px 14px;
-    background: rgba(234, 243, 251, 0.60);
+    background: rgba(234, 243, 251, 0.40);
     font-size: 14px;
     transition: all 0.3s ease;
-    border-bottom: 1px solid black;
+    // border-bottom: 1px solid black;
+    box-shadow: $box-shadow;
   }
 }
 
@@ -74,5 +77,5 @@
 }
 
 .form--input:invalid:not(:focus):not(:placeholder-shown) {
-  background: rgba(234, 243, 251, 0.60);
+  background: rgba(234, 243, 251, 0.40);
 }
