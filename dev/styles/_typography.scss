@@ -1,10 +1,8 @@
 // FONTS
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
-// @import url(https://fonts.googleapis.com/css?family=Vidaloka);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300,500);
 
 $font-family--header    : "Roboto Mono", serif;
-// $font-family--header    : "Cutive Mono", serif;
 $font-family--body      : "Open Sans", sans-serif;
 
 // Font Weights
@@ -90,12 +88,18 @@ ul {
     }
 }
 
-.accordion {
-    font-weight: $font-weight--bold;
-}
-
 .main--subtitle {
     @include fontSize(22);
     font-family: $font-family--body;
     font-weight: $font-weight--light;
+}
+
+.section-portfolio--article-tech {
+    color: #ec898d;
+    font-family: $font-family--header;
+}
+
+label,
+.form--submit {
+    @include fontSize(14);
 }
