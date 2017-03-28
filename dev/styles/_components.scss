@@ -2,16 +2,19 @@
 
 // BUTTONS
 
+.button {
+  @include bubble-top;
+  @include padding-margin(1rem 1.5rem, .5rem 1rem .5rem 0);
+  background: $black;
+  border: none; 
+}
+
 .section-portfolio--article-links {
-    @include bubble-top;
-    @include padding-margin(1rem 1.5rem, .5rem 1rem .5rem 0);
-    background: $black;
-    border: none; 
+    @extend .button;
   }
 
   .form--submit {
-    border: none;
-    background: $black;
+    @extend .button;
     @include padding-margin(1rem 1.5rem, 1.5rem 0);
     width: 100%;
     color: $desert-storm;
@@ -25,8 +28,6 @@
 
 .form {
   width: 70%;
-  // display: flex;
-  // flex-flow: column wrap;
   &--input-container {
     position: relative;
   }
