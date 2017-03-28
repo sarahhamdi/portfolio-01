@@ -1,0 +1,54 @@
+/* Button animations from Hover - https://github.com/IanLunn/Hover */
+
+$tipWidth: 10px !default;  //the width of the speech bubble tip
+$tipHeight: 10px !default; //the height of the speech bubble tip
+$tipColor: $black !default;
+$mediumDuration: .3s !default;
+
+@mixin hardwareAccel() {
+  // Improve performance on mobile/tablet devices
+  // Perspective reduces blurryness of text in Chrome
+  transform: perspective(1px) translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+  // Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@mixin forceBlockLevel() {
+  // Transforms need to be block-level to work
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin hacks() {
+  @include forceBlockLevel();
+  @include hardwareAccel();
+  @include improveAntiAlias();
+}
+
+@mixin bubble-top {
+  @include hacks();
+  position: relative;
+
+  &:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    border-style: solid;
+    transition-duration: $mediumDuration;
+    transition-property: transform;
+    left: calc(50% - #{$tipWidth});
+    top: 0;
+    border-width: 0 $tipWidth $tipHeight $tipWidth;
+    border-color: transparent transparent $tipColor transparent;
+  }
+
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    transform: translateY(-($tipHeight));
+  }
+}
