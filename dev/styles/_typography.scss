@@ -1,54 +1,94 @@
 // FONTS
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300,500);
 
-$font-family--header    : "Roboto Mono", serif;
-$font-family--body      : "Open Sans", sans-serif;
+@font-face {
+  font-family: 'Avenir';
+  src: url('../assets/fonts/avenir-roman.ttf') format('truetype');
+  src: url('../assets/fonts/avenir-roman.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../assets/fonts/avenir-light.ttf') format('truetype');
+  src: url('../assets/fonts/avenir-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../assets/fonts/avenir-heavy.ttc') format('truetype');
+  src: url('../assets/fonts/avenir-heavy.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../assets/fonts/avenir-oblique.ttc') format('truetype');
+  src: url('../assets/fonts/avenir-oblique.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
+$font-family--header    : "Avenir", serif;
+$font-family--body      : "Avenir", sans-serif;
 
 // Font Weights
 $font-weight--light     : 300;
 $font-weight--normal    : 400;
-$font-weight--bold      : 600;
-$font-weight--bolder    : 700;
+$font-weight--bold      : 700;
+// $font-weight--bolder    : bold;
 
 $base__line-height: 1.7;
 
 // TYPOGRAPHY
 body {
     @include fontSize(16);
-    color: palette(text, inverted);
+    color: palette(text, primary);
     font-family: $font-family--body;
     font-weight: $font-weight--light;
     line-height: $base__line-height;
-    letter-spacing: 1px; 
+}
+
+::selection {
+    color: #fff800;
+    background: #6fffdf;
 }
 
 h1, h2, h4 {
-    @include padding-margin(0, 1.4rem 0 0.5rem 0);
+    @include padding-margin(0, 0 0 0.5rem 0);
     letter-spacing: 1px;
+    color: palette(text, heading);
 }
 
 h1{
-    @include fontSize(74);
-    @include padding-margin(0, 35% 0 0 0);
+    @include fontSize(76);
+    @include padding-margin(0, 16rem 0 0.5rem 0);
     font-family: $font-family--header;
-    font-weight: $font-weight--bolder;
+    font-weight: $font-weight--bold;
 }
 
 h2,
 h4 {
     font-family: $font-family--header;
-    font-weight: $font-weight--light;
 }
 
 h2 {
     @include fontSize(40);
+    @include padding-margin(0, 0 0 8rem 0);
 }
 
 h3 {
-    @include fontSize(22);
-    font-weight: $font-weight--bold;
+    @include fontSize(24);
+    font-weight: $font-weight--normal;
     @include padding-margin(0, 0);
+    text-transform: uppercase;
 }
 
 h4 {
@@ -59,47 +99,55 @@ h4 {
 }
 
 p {
-    @include fontSize(14);
+    @include fontSize(16);
     font-weight: $font-weight--light;
 }
 
 .strong {
-    font-weight: $font-weight--normal;
+    font-weight: $font-weight--bold;
 }
 
 a,
 a:visited {
     font-weight: $font-weight--normal;
-    color: palette(text, primary);
+    color: palette(text, link);
     text-decoration: none;
     &:hover {
-        color: palette(text, primary);
+        color: $aluminium;
     }
 }
 
-a.section-portfolio--article-links,
-a.section-portfolio--article-links:visited {
+.section-portfolio--article-links,
+.section-portfolio--article-links:visited {
     color: palette(text, inverted);
+    &:hover {
+      color: palette(text, inverted);  
+    }
 }
 
 ul {
     li {
-        @include fontSize(14);
+        @include fontSize(16);
     }
 }
 
 .main--subtitle {
-    @include fontSize(22);
+    @include fontSize(20);
     font-family: $font-family--body;
     font-weight: $font-weight--light;
+    color: palette(text, heading);
+    @include padding-margin(0, 0 0 1rem 0);
 }
 
 .section-portfolio--article-tech {
-    color: #ec898d;
-    font-family: $font-family--header;
+    color: palette(text, heading);
+    @include fontSize(13);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: $font-weight--bold;
 }
 
 label,
 .form--submit {
-    @include fontSize(14);
+    @include fontSize(16);
 }
