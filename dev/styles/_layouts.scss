@@ -31,9 +31,14 @@ body {
 		&:last-of-type {
 			@include padding-margin(0, 0);
 		}
+	}
+	&--item__svg {
+		height: 2.5rem;
+		fill: palette(text, link);
+	}
+	&--item:hover {
 		svg {
-			height: 2.5rem;
-			fill: palette(text, link);
+			fill: palette(text, link-hover);
 		}
 	}
 }

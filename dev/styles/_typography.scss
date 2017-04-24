@@ -1,6 +1,5 @@
 // FONTS
-// @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300,500);
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
 
 @font-face {
   font-family: 'Avenir';
@@ -26,24 +25,13 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Avenir';
-  src: url('../assets/fonts/avenir-oblique.ttc') format('truetype');
-  src: url('../assets/fonts/avenir-oblique.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
-}
-
-
-
-$font-family--header    : "Avenir", serif;
-$font-family--body      : "Avenir", sans-serif;
+$font-family--header    : "Avenir", "Muli", sans-serif;
+$font-family--body      : "Avenir", "Muli", sans-serif;
 
 // Font Weights
 $font-weight--light     : 300;
 $font-weight--normal    : 400;
 $font-weight--bold      : 700;
-// $font-weight--bolder    : bold;
 
 $base__line-height: 1.7;
 
