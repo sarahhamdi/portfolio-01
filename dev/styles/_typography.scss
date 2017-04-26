@@ -87,8 +87,9 @@ h4 {
 }
 
 p {
-    @include fontSize(16);
+    @include fontSize(14);
     font-weight: $font-weight--light;
+    letter-spacing: 1px;
 }
 
 .strong {
@@ -101,7 +102,7 @@ a:visited {
     color: palette(text, link);
     text-decoration: none;
     &:hover {
-        color: $aluminium;
+        color: palette(text, link-hover);
     }
 }
 
@@ -113,10 +114,11 @@ a:visited {
     }
 }
 
-ul {
-    li {
-        @include fontSize(16);
-    }
+.nav--item {
+    @include fontSize(12);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
 }
 
 .main--subtitle {

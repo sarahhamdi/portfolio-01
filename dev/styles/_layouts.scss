@@ -4,18 +4,26 @@ body {
   @include padding-margin(0, 0);
 }
 
+.wrapper {
+	max-width: 120rem;
+	@include padding-margin(0 4rem, 0 auto);
+}
+
 .nav {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	@include padding-margin(2rem 15%, 0);
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
+	@include padding-margin(2rem 0, 0);
 	background: palette(background, dark);
 	// border-bottom: 1px solid palette(base, lines);
 	z-index: 9000;
-	// box-shadow: 0 11px 16px 0 rgba(0,0,0, 0.07);
+	box-shadow: 0 11px 16px 0 rgba(0,0,0, 0.16);
+	&--wrapper {
+		@extend .wrapper;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
 	&--social,
 	&--links {
 		@include padding-margin(0, 0);
@@ -43,18 +51,20 @@ body {
 	}
 }
 
+
+
 .main {
-	@include padding-margin(0, 16rem  15% 20rem 15%);
+	@include padding-margin(0, 16rem 0 20rem 0);
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: flex-start;
 	&--container {
-		width: 55%;
-		@include padding-margin(0 8rem 0 0, 0);
+		width: 60%;
+		@include padding-margin(0 12rem 0 0, 0);
 	}
 	&--container__image {
-		width: 45%
+		width: 40%
 	}
 	&--hero-image {
 		width: 100%;
@@ -63,15 +73,15 @@ body {
 }
 
 .section-portfolio {
-	@include padding-margin(0, 0 15%);
+	@include padding-margin(0, 0 15% 0 0);
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	&--article {
 		background: palette(background, dark);
 		position: relative;
-		@include padding-margin(8rem 5rem 8rem 12rem, 5rem 0 5rem 32rem);
-    border-left: 1px solid palette(base, lines);
+		@include padding-margin(8rem 0 8rem 12rem, 5rem 0 5rem 32rem);
+    // border-left: 1px solid palette(base, lines);
 	}
 	&--article-content {
 		margin-bottom: 3rem;
@@ -85,9 +95,12 @@ body {
 	}
 }
 
-.footer,
 .section-form {
-	@include padding-margin(0, 16rem 15% 8rem);
+	@include padding-margin(0, 16rem 0);
+}
+
+.footer {
+	@include padding-margin(0, 16rem 0 8rem 0)
 }
 
 .form {
