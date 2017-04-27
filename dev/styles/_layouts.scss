@@ -1,23 +1,22 @@
 
 body {
+	@include padding-margin(0, 0);
 	background: palette(background, dark);
-  @include padding-margin(0, 0);
 }
 
 .wrapper {
-	max-width: 120rem;
 	@include padding-margin(0 4rem, 0 auto);
+	max-width: 120rem;
 }
 
 .nav {
+	@include padding-margin(2rem 0, 0);
+	box-shadow: 0;
 	position: fixed;
 	top: 0;
+	transition: all 0.5s;
 	width: 100%;
-	@include padding-margin(2rem 0, 0);
-	background: palette(background, dark);
-	// border-bottom: 1px solid palette(base, lines);
 	z-index: 9000;
-	box-shadow: 0 11px 16px 0 rgba(0,0,0, 0.16);
 	&--wrapper {
 		@extend .wrapper;
 		display: flex;
@@ -27,22 +26,23 @@ body {
 	&--social,
 	&--links {
 		@include padding-margin(0, 0);
-		display: inline-block;
-		list-style: none;
 		display: flex;
+		display: inline-block;
 		flex-flow: row wrap;
-		justify-content: space-between;
 		align-items: center;
+		justify-content: space-between;
+		list-style: none;
 	}
 	&--item {
 		@include padding-margin(0, 0 2rem 0 0);
+		display: inline-block;
 		&:last-of-type {
 			@include padding-margin(0, 0);
 		}
 	}
 	&--item__svg {
-		height: 2.5rem;
 		fill: palette(text, link);
+		height: 2.5rem;
 	}
 	&--item:hover {
 		svg {
@@ -51,24 +51,21 @@ body {
 	}
 }
 
-
-
 .main {
-	@include padding-margin(0, 16rem 0 20rem 0);
+	@include padding-margin(16rem 0 0 0, 0 0 10rem 0);
+	align-items: flex-start;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	align-items: flex-start;
 	&--container {
-		width: 60%;
 		@include padding-margin(0 12rem 0 0, 0);
+		width: 60%;
 	}
 	&--container__image {
 		width: 40%
 	}
 	&--hero-image {
 		width: 100%;
-		// float: right;
 	}
 }
 
@@ -78,31 +75,33 @@ body {
 	flex-flow: row wrap;
 	justify-content: space-between;
 	&--article {
+		@include padding-margin(8rem 0 8rem 12rem, 5rem 0 5rem 32rem);
 		background: palette(background, dark);
 		position: relative;
-		@include padding-margin(8rem 0 8rem 12rem, 5rem 0 5rem 32rem);
-    // border-left: 1px solid palette(base, lines);
+    border-left: 1px solid palette(base, lines);
 	}
 	&--article-content {
 		margin-bottom: 3rem;
 	}
 	&--article-img {
-		width: 60rem;
-		top: 5rem;
 		left: -32rem;
 		position: absolute;
+		top: 5rem;
+		width: 60rem;
 		z-index: $zindex-minus1;
 	}
 }
 
 .section-form {
-	@include padding-margin(0, 16rem 0);
-}
-
-.footer {
-	@include padding-margin(0, 16rem 0 8rem 0)
+	@include padding-margin(0, 8rem 0 0 0);
 }
 
 .form {
 	@include padding-margin(0, 10rem 0);
 }
+
+.footer {
+	@include padding-margin(0, 0rem 0 8rem 0)
+}
+
+

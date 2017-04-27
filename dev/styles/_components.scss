@@ -17,9 +17,8 @@
   .form--submit {
     @extend .button;
     @include padding-margin(1.5rem, 1.5rem 0);
-
-    width: 100%;
     color: palette(text, inverted);
+    width: 100%;
     &:focus {
       outline: none;
     }
@@ -29,34 +28,31 @@
 // FORM
 
 .form {
-  width: 70%;
+  width: 60%;
   &--input-container {
     position: relative;
   }
   label {
-    // color: rgba(29, 47, 69, 1);
-    // color: #500d3e;
     color: $black;
-    font-family: $font-family--body;
-    position: absolute;
-    left: 14px;
-    top: 20px;
     cursor: text;
+    font-family: $font-family--body;
+    left: 14px;
+    position: absolute;
+    top: 20px;
     transition: all 0.1s ease;
   }
   #message {
     height: 250px;
   }
   &--input {
-    width: 100%;
+    background: rgba(234, 243, 251, 0.40);
     border: 0;
+    box-shadow: $box-shadow;
+    font-size: 14px;
     margin: 8px 0;
     padding: 25px 10px 8px 14px;
-    background: rgba(234, 243, 251, 0.40);
-    font-size: 14px;
     transition: all 0.3s ease;
-    // border-bottom: 1px solid black;
-    box-shadow: $box-shadow;
+    width: 100%;
   }
 }
 
@@ -69,8 +65,8 @@
 
 .form--input:focus + label,
 .form--input:valid + label{
-  top: 13px;
   font-size: 11px;
+  top: 13px;
 }
 
 .form--input:invalid {

@@ -45,14 +45,14 @@ body {
 }
 
 ::selection {
-    color: #fff800;
-    background: #6fffdf;
+    background: rgba(0,0,0,1);
+    color: #ffcc88;
 }
 
 h1, h2, h4 {
     @include padding-margin(0, 0 0 0.5rem 0);
-    letter-spacing: 1px;
     color: palette(text, heading);
+    letter-spacing: 1px;
 }
 
 h1{
@@ -69,21 +69,20 @@ h4 {
 
 h2 {
     @include fontSize(40);
-    @include padding-margin(0, 0 0 8rem 0);
+    @include padding-margin(10rem 0 0 0, 0 0 8rem 0);
 }
 
 h3 {
     @include fontSize(24);
-    font-weight: $font-weight--normal;
     @include padding-margin(0, 0);
+    font-weight: $font-weight--normal;
     text-transform: uppercase;
 }
 
 h4 {
     @include fontSize(16);
-    text-transform: uppercase;
     font-weight: $font-weight--normal;
-
+    text-transform: uppercase;
 }
 
 p {
@@ -98,10 +97,12 @@ p {
 
 a,
 a:visited {
-    font-weight: $font-weight--normal;
     color: palette(text, link);
+    font-weight: $font-weight--normal;
     text-decoration: none;
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
         color: palette(text, link-hover);
     }
 }
@@ -116,25 +117,24 @@ a:visited {
 
 .nav--item {
     @include fontSize(12);
-    text-transform: uppercase;
     letter-spacing: 1px;
-
+    text-transform: uppercase;
 }
 
 .main--subtitle {
     @include fontSize(20);
+    @include padding-margin(0, 0 0 1rem 0);
+    color: palette(text, heading);
     font-family: $font-family--body;
     font-weight: $font-weight--light;
-    color: palette(text, heading);
-    @include padding-margin(0, 0 0 1rem 0);
 }
 
 .section-portfolio--article-tech {
-    color: palette(text, heading);
     @include fontSize(13);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: palette(text, heading);
     font-weight: $font-weight--bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 label,

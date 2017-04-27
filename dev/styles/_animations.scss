@@ -33,17 +33,17 @@ $mediumDuration: .3s !default;
   position: relative;
 
   &:before {
+    border-color: transparent transparent $tipColor transparent;
+    border-style: solid;
+    border-width: 0 $tipWidth $tipHeight $tipWidth;
+    content: '';
+    left: calc(50% - #{$tipWidth});
     pointer-events: none;
     position: absolute;
-    z-index: -1;
-    content: '';
-    border-style: solid;
+    top: 0;
     transition-duration: $mediumDuration;
     transition-property: transform;
-    left: calc(50% - #{$tipWidth});
-    top: 0;
-    border-width: 0 $tipWidth $tipHeight $tipWidth;
-    border-color: transparent transparent $tipColor transparent;
+    z-index: -1;
   }
 
   &:hover:before,
