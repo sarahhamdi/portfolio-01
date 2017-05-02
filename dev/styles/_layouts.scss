@@ -75,25 +75,25 @@ body {
 	flex-flow: row wrap;
 	justify-content: space-between;
 	&--article {
-		@include padding-margin(8rem 0 8rem 12rem, 5rem 0 5rem 32rem);
+		display: flex;
+		flex-flow: row wrap;
+	}
+	&--article-details {
+		width: 70%;
+		@include padding-margin(8rem 0 8rem 12rem, 5rem 0 5rem 0);
 		background: palette(background, dark);
 		position: relative;
     border-left: 1px solid palette(base, lines);
 	}
-	&--article-content {
-		margin-bottom: 3rem;
-	}
 	&--article-img {
-		left: -32rem;
-		position: absolute;
-		top: 5rem;
-		width: 60rem;
+		width: 30%;
+		@include padding-margin(8rem 0, 0)
 		z-index: $zindex-minus1;
 	}
 }
 
 .section-form {
-	@include padding-margin(0, 8rem 0 0 0);
+	@include padding-margin(0, 6rem 0 0 0);
 }
 
 .form {
