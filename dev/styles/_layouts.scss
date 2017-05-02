@@ -14,7 +14,7 @@ body {
 	box-shadow: 0;
 	position: fixed;
 	top: 0;
-	transition: all 0.5s;
+	transition: $transition;
 	width: 100%;
 	z-index: 9000;
 	&--wrapper {
@@ -26,12 +26,13 @@ body {
 	&--social,
 	&--links {
 		@include padding-margin(0, 0);
+		align-items: center;
 		display: flex;
 		display: inline-block;
 		flex-flow: row wrap;
-		align-items: center;
 		justify-content: space-between;
 		list-style: none;
+		transition: $transition;
 	}
 	&--item {
 		@include padding-margin(0, 0 2rem 0 0);
@@ -57,15 +58,15 @@ body {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
+	transition: $transition;
 	&--container {
 		@include padding-margin(0 12rem 0 0, 0);
+		transition: $transition;
 		width: 60%;
 	}
 	&--container__image {
+		transition: $transition;
 		width: 40%
-	}
-	&--hero-image {
-		width: 100%;
 	}
 }
 
@@ -74,20 +75,24 @@ body {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
+	transition: $transition;
 	&--article {
 		display: flex;
 		flex-flow: row wrap;
 	}
 	&--article-details {
-		width: 70%;
 		@include padding-margin(8rem 0 8rem 12rem, 5rem 0 5rem 0);
 		background: palette(background, dark);
+		border-left: 1px solid palette(base, lines);
 		position: relative;
-    border-left: 1px solid palette(base, lines);
+		transition: $transition;
+		width: 70%;
+    transition: $transition;
 	}
 	&--article-img {
-		width: 30%;
 		@include padding-margin(8rem 0, 0)
+		transition: $transition;
+		width: 30%;
 		z-index: $zindex-minus1;
 	}
 }
@@ -103,5 +108,3 @@ body {
 .footer {
 	@include padding-margin(0, 0rem 0 8rem 0)
 }
-
-

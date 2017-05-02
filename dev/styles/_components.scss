@@ -29,6 +29,7 @@
 
 .form {
   width: 60%;
+  transition: $transition;
   &--input-container {
     position: relative;
   }

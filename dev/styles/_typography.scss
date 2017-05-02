@@ -60,6 +60,7 @@ h1{
     @include padding-margin(0, 16rem 0 0.5rem 0);
     font-family: $font-family--header;
     font-weight: $font-weight--bold;
+    transition: $transition;
 }
 
 h2,
@@ -70,6 +71,7 @@ h4 {
 h2 {
     @include fontSize(40);
     @include padding-margin(10rem 0 0 0, 0 0 8rem 0);
+    transition: $transition;
 }
 
 h3 {
