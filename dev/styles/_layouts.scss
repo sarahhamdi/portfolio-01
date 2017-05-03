@@ -61,11 +61,11 @@ body {
 	transition: $transition;
 	&--container {
 		@include padding-margin(0 12rem 0 0, 0);
-		transition: $transition;
+		// transition: $transition;
 		width: 60%;
 	}
 	&--container__image {
-		transition: $transition;
+		// transition: $transition;
 		width: 40%
 	}
 }
