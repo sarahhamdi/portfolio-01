@@ -54,22 +54,21 @@
 	h2 {
 		padding: 12rem 0 0 0;
 	}
-	.nav--wrapper, .wrapper {
+	.nav {
+		padding: 1rem 0;
+	}
+	.nav--wrapper, 
+	.wrapper {
 		padding: 0 2rem;
 	}
-	.main {
-		margin: 0;
-	}
-	.section-form {
+	.main,
+	.section-form,
+	.section-portfolio {
 		margin: 0;
 	}
 	.section-portfolio--article-details {
 		padding: 8rem 0 8rem 6rem;
 	}
-	.section-portfolio {
-		margin: 0;
-	}
-
 }
 
 @media (max-width: 500px) {
@@ -84,5 +83,4 @@
 		border-left: none;
 		padding: 0;
 	}
-
 }
