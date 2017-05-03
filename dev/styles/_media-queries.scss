@@ -1,4 +1,7 @@
 @media (max-width: 1060px) {
+	h1 {
+		margin: 4rem 0 .5rem 0;
+	}
 	.main {
 		flex-flow: column wrap;
 	}
@@ -11,9 +14,6 @@
 		padding: 0;
 		text-align: center;
 		width: 100%;
-	}
-	h1 {
-		margin: 4rem 0 .5rem 0;
 	}
 }
 
@@ -51,12 +51,25 @@
 	h1 {
 		@include fontSize(48);
 	}
+	h2 {
+		padding: 12rem 0 0 0;
+	}
+	.nav--wrapper, .wrapper {
+		padding: 0 2rem;
+	}
+	.main {
+		margin: 0;
+	}
+	.section-form {
+		margin: 0;
+	}
 	.section-portfolio--article-details {
 		padding: 8rem 0 8rem 6rem;
 	}
 	.section-portfolio {
 		margin: 0;
 	}
+
 }
 
 @media (max-width: 500px) {
@@ -71,7 +84,5 @@
 		border-left: none;
 		padding: 0;
 	}
-	h2 {
-		padding: 12rem 0 0 0;
-	}
+
 }
