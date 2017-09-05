@@ -75,12 +75,19 @@
 	.main--container__image {
 		width: 65%;
 	}
-	.section-portfolio--article-links {
+	.section-portfolio--article-links,
+	.section-portfolio--article-links__case-study {
 		text-align: center;
 		width: 100%;
+		&:hover:before,
+		&:focus:before,
+		&:active:before {
+			transform: none;
+		}
 	}
 	.section-portfolio--article-details {
 		border-left: none;
 		padding: 0;
+		margin-left: 0;
 	}
 }

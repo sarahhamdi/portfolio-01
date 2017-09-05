@@ -81,12 +81,13 @@ body {
 		flex-flow: row wrap;
 	}
 	&--article-details {
-		@include padding-margin(8rem 0 8rem 12rem, 5rem 0 5rem 0);
+		// @include padding-margin(8rem 0 8rem 12rem, 5rem 0 5rem 0);
+		@include padding-margin(2rem 0 2rem 12rem, 2rem 0 2rem 5rem);
 		background: palette(background, dark);
 		border-left: 1px solid palette(base, lines);
 		position: relative;
 		transition: $transition;
-		width: 70%;
+		width: 90%;
     transition: $transition;
 	}
 	&--article-img {

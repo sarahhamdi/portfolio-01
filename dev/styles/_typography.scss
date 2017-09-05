@@ -109,11 +109,19 @@ a:visited {
     }
 }
 
-.section-portfolio--article-links,
-.section-portfolio--article-links:visited {
-    color: palette(text, inverted);
-    &:hover {
-      color: palette(text, inverted);  
+.section-portfolio--article {
+    &-links,
+    &-links:visited {
+        color: palette(text, inverted);
+        &:hover {
+          color: palette(text, inverted);  
+        }
+    }
+    &-links__case-study {
+        color: palette(text, link);
+        &:hover {
+          color: palette(text, link);  
+        }
     }
 }
 

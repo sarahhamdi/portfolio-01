@@ -7,6 +7,7 @@ $transition: all 0.5s;
 $tipWidth: 10px !default;  //the width of the speech bubble tip
 $tipHeight: 10px !default; //the height of the speech bubble tip
 $tipColor: palette(text, link) !default;
+$tipColorDark: black;
 $mediumDuration: .3s !default;
 
 @mixin hardwareAccel() {
@@ -55,4 +56,11 @@ $mediumDuration: .3s !default;
   &:active:before {
     transform: translateY(-($tipHeight));
   }
+}
+
+@mixin bubble-top-black {
+ @include bubble-top;
+ &:before {
+  border-color: transparent transparent $tipColorDark transparent;
+ }
 }

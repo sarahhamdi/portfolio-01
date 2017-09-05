@@ -12,18 +12,24 @@
 
 .section-portfolio--article-links {
     @extend .button;
-  }
-
-  .form--submit {
-    @extend .button;
-    @include padding-margin(1.5rem, 1.5rem 0);
-    color: palette(text, inverted);
-    width: 100%;
-    &:focus {
-      outline: none;
+    
+    &__case-study {
+      @extend .button;
+      @include bubble-top-black;
+      background: black;
+      color: palette(text, link);
     }
   }
 
+.form--submit {
+  @extend .button;
+  @include padding-margin(1.5rem, 1.5rem 0);
+  color: palette(text, inverted);
+  width: 100%;
+  &:focus {
+    outline: none;
+  }
+}
 
 // FORM
 
