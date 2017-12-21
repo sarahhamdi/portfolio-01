@@ -3,7 +3,6 @@
 @import 'animations';
 @import 'typography';
 @import 'layouts';
-@import 'components';
 @import 'media-queries';
 
 html {
@@ -12,4 +11,8 @@ html {
 
 img {
 	width: 100%;
+}
+
+* {
+    transition: $transition;    
 }

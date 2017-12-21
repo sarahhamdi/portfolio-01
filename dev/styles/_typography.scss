@@ -36,71 +36,33 @@ $font-weight--bold      : 700;
 $base__line-height: 1.7;
 
 // TYPOGRAPHY
-body {
-    @include fontSize(16);
+body,
+p,
+li {
+    @include fontSize(18);
     color: palette(text, primary);
     font-family: $font-family--body;
     font-weight: $font-weight--light;
     line-height: $base__line-height;
+    letter-spacing: 1px;
 }
 
 ::selection {
-    background: rgba(0,0,0,1);
-    color: #ffd0d7;
+    background: rgb(156, 156, 156);
+    color: #d2fffb;
 }
 
-h1, h2, h4 {
-    @include padding-margin(0, 0 0 0.5rem 0);
+h1, h2, h3 {
     color: palette(text, heading);
-    letter-spacing: 1px;
-}
-
-h1{
-    @include fontSize(76);
-    @include padding-margin(0, 16rem 0 0.5rem 0);
     font-family: $font-family--header;
-    font-weight: $font-weight--bold;
-    transition: $transition;
-}
-
-h2,
-h4 {
-    font-family: $font-family--header;
-}
-
-h2 {
-    @include fontSize(40);
-    @include padding-margin(10rem 0 0 0, 0 0 8rem 0);
-    transition: $transition;
-}
-
-h3 {
-    @include fontSize(24);
-    @include padding-margin(0, 0);
-    font-weight: $font-weight--normal;
-    text-transform: uppercase;
-}
-
-h4 {
-    @include fontSize(16);
-    font-weight: $font-weight--normal;
-    text-transform: uppercase;
-}
-
-p {
-    @include fontSize(14);
-    font-weight: $font-weight--light;
     letter-spacing: 1px;
-}
-
-.strong {
-    font-weight: $font-weight--bold;
 }
 
 a,
 a:visited {
     color: palette(text, link);
     font-weight: $font-weight--light;
+    border-bottom: 1px dashed $grey;
     text-decoration: none;
     &:hover,
     &:active,
@@ -109,45 +71,35 @@ a:visited {
     }
 }
 
-.section-portfolio--article {
-    &-links,
-    &-links:visited {
-        color: palette(text, inverted);
-        &:hover {
-          color: palette(text, inverted);  
-        }
-    }
-    &-links__case-study {
-        color: palette(text, link);
-        &:hover {
-          color: palette(text, link);  
-        }
-    }
+.h1--large {
+    @extend h1;
+    @include fontSize(66);
+    @include padding-margin(0, 0.45rem 0 3rem);
+    line-height: 1.36;
+    font-weight: $font-weight--bold;
 }
 
-.nav--item {
-    @include fontSize(12);
-    letter-spacing: 1px;
+.h1--small {
+    @include fontSize(18);
+    @include padding-margin(0, 1rem 0 6rem);
+    line-height: 1;
     text-transform: uppercase;
+    font-weight: $font-weight--light;
+    color: palette(text, link);
 }
 
-.main--subtitle {
-    @include fontSize(20);
-    @include padding-margin(0, 0 0 1rem 0);
+.h2--large {
+    @include fontSize(30);
+    @include padding-margin(0, 0 0 3rem 0);
+    line-height: 1.5;
     color: palette(text, heading);
     font-family: $font-family--body;
     font-weight: $font-weight--light;
 }
 
-.section-portfolio--article-tech {
-    @include fontSize(13);
-    color: palette(text, heading);
-    font-weight: $font-weight--bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-label,
-.form--submit {
-    @include fontSize(16);
+.p--subtitle {
+    @include fontSize(18);
+    line-height: $base__line-height;
+    @include padding-margin(0, 0 0 1.8rem 0);
+    color: palette(text, primary);
 }
