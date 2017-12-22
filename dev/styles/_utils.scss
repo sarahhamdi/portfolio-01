@@ -3,12 +3,27 @@
 // greys
 $white          : rgba(255, 255, 255, 1.00);
 $grey           : #adadad;
-$black          : rgba(8, 8, 8, 1.00);
 
-// others
-$koromiko       : rgba(251, 196, 99, 1.00);
+// shadows
 $text-shadow    : 3px 4px 7px 0px rgba(155, 155, 155, 0.39);
 $box-shadow     : 0 11px 16px 0 rgba(0,0,0,0.4);
+
+
+// colour schemes - option 1
+$black          : #16101A;
+$koromiko       : rgba(251, 196, 99, 1.00);
+
+// colour schemes - option 2
+// $black          : rgb(21, 17, 92);
+// $koromiko       : rgba(247, 91, 106, 1.00);
+
+// colour schemes - option 3
+// $black          :#5a0000;
+// $koromiko       :#68fdff
+
+//colour schemes - option 4
+// $black          : #16101A;
+// $koromiko       :#919191;
 
 $palettes: (
   // this whole "base" thing is a disaster

@@ -4,12 +4,8 @@ body {
 }
 
 .main {
-	@include padding-margin(0 10rem, 12rem auto 10rem auto);
-	// align-items: flex-start;
-	// display: flex;
-	// flex-flow: row wrap;
-	// justify-content: space-between;
+	@include padding-margin(0 12rem, 12rem auto 6rem auto);
 	&--container_1 {
-		max-width: 760px;
+		max-width: 651px;
 	}
 }

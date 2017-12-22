@@ -1,5 +1,5 @@
 // FONTS
-@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+// @import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
 
 @font-face {
   font-family: 'Avenir';
@@ -33,7 +33,7 @@ $font-weight--light     : 300;
 $font-weight--normal    : 400;
 $font-weight--bold      : 700;
 
-$base__line-height: 1.7;
+$base__line-height: 1.8;
 
 // TYPOGRAPHY
 body,
@@ -74,15 +74,13 @@ a:visited {
 .h1--large {
     @extend h1;
     @include fontSize(66);
-    @include padding-margin(0, 0.45rem 0 3rem);
-    line-height: 1.36;
+    @include padding-margin(0, 0);
     font-weight: $font-weight--bold;
 }
 
 .h1--small {
     @include fontSize(18);
-    @include padding-margin(0, 1rem 0 6rem);
-    line-height: 1;
+    @include padding-margin(0, 0 0 6rem);
     text-transform: uppercase;
     font-weight: $font-weight--light;
     color: palette(text, link);
@@ -90,16 +88,14 @@ a:visited {
 
 .h2--large {
     @include fontSize(30);
-    @include padding-margin(0, 0 0 3rem 0);
-    line-height: 1.5;
+    @include padding-margin(0, 0 0 6rem 0);
     color: palette(text, heading);
-    font-family: $font-family--body;
-    font-weight: $font-weight--light;
+    font-weight: $font-weight--normal;
 }
 
 .p--subtitle {
     @include fontSize(18);
     line-height: $base__line-height;
-    @include padding-margin(0, 0 0 1.8rem 0);
+    @include padding-margin(0, 0 0 3rem 0);
     color: palette(text, primary);
 }

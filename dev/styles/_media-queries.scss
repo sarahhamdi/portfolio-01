@@ -1,23 +1,21 @@
-@media (max-width: 700px) {
+@media (max-width: 756px) {
 	.main {
-	@include padding-margin(0 8rem, 8rem auto 3rem auto);
+	@include padding-margin(0 6rem, 6rem auto 3rem auto);
 	}
 }
 
-@media (max-width: 560px) {
+@media (max-width: 636px) {
 	.main {
-		@include padding-margin(0 6rem, 6rem auto 3rem auto);
+		@include padding-margin(0 3rem, 3rem auto 3rem auto);
 	}
+	.h1--large {
+		@include fontSize(45);
+	}
+
 }
 
  @media (max-width: 400px) {
-	.main {
-	 @include padding-margin(0 2rem, 4rem auto 3rem auto);
-	}
-	.h1--large {
-		@include fontSize(46);
-	}
 	.h2--large {
-		@include fontSize(20);
+		@include fontSize(21);
 	}
 }
