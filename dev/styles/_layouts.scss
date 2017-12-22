@@ -1,111 +1,11 @@
-
 body {
 	@include padding-margin(0, 0);
 	background: palette(background, dark);
 }
 
-.wrapper {
-	@include padding-margin(0 4rem, 0 auto);
-	max-width: 120rem;
-}
-
-.nav {
-	@include padding-margin(2rem 0, 0);
-	box-shadow: 0;
-	position: fixed;
-	top: 0;
-	transition: $transition;
-	width: 100%;
-	z-index: 9000;
-	&--wrapper {
-		@extend .wrapper;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-	}
-	&--social,
-	&--links {
-		@include padding-margin(0, 0);
-		align-items: center;
-		display: flex;
-		display: inline-block;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		list-style: none;
-		transition: $transition;
-	}
-	&--item {
-		@include padding-margin(0, 0 2rem 0 0);
-		display: inline-block;
-		&:last-of-type {
-			@include padding-margin(0, 0);
-		}
-	}
-	&--item__svg {
-		fill: palette(text, link);
-		height: 2.5rem;
-	}
-	&--item:hover {
-		svg {
-			fill: palette(text, link-hover);
-		}
-	}
-}
-
 .main {
-	@include padding-margin(16rem 0 0 0, 0 0 10rem 0);
-	align-items: flex-start;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	transition: $transition;
-	&--container {
-		@include padding-margin(0 12rem 0 0, 0);
-		// transition: $transition;
-		width: 60%;
+	@include padding-margin(0 12rem, 12rem auto 6rem auto);
+	&--container_1 {
+		max-width: 651px;
 	}
-	&--container__image {
-		// transition: $transition;
-		width: 40%
-	}
-}
-
-.section-portfolio {
-	@include padding-margin(0, 0 15% 0 0);
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	transition: $transition;
-	&--article {
-		display: flex;
-		flex-flow: row wrap;
-	}
-	&--article-details {
-		// @include padding-margin(8rem 0 8rem 12rem, 5rem 0 5rem 0);
-		@include padding-margin(2rem 0 2rem 12rem, 2rem 0 2rem 5rem);
-		background: palette(background, dark);
-		border-left: 1px solid palette(base, lines);
-		position: relative;
-		transition: $transition;
-		width: 90%;
-    transition: $transition;
-	}
-	&--article-img {
-		@include padding-margin(8rem 0, 0)
-		transition: $transition;
-		width: 30%;
-		z-index: $zindex-minus1;
-	}
-}
-
-.section-form {
-	@include padding-margin(0, 6rem 0 0 0);
-}
-
-.form {
-	@include padding-margin(0, 10rem 0);
-}
-
-.footer {
-	@include padding-margin(0, 0rem 0 8rem 0)
 }
