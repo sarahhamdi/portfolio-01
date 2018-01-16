@@ -17,12 +17,12 @@
     
 
 // task: browser-sync
-gulp.task('browser-sync', () => {
-  browserSync.init({
-    server: './',
-open: false	
-  })
-});
+// gulp.task('browser-sync', () => {
+//   browserSync.init({
+//     server: './',
+// open: false	
+//   })
+// });
 
 // task: styles
 gulp.task('styles', function() {
@@ -69,4 +69,4 @@ gulp.task('watch', () => {
 });
 
 // task: watch global 
-gulp.task('default', ['browser-sync', 'watch', 'styles', 'scripts', 'assets']);
+// gulp.task('default', ['browser-sync', 'watch', 'styles', 'scripts', 'assets']);
