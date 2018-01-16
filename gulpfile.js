@@ -19,7 +19,8 @@
 // task: browser-sync
 gulp.task('browser-sync', () => {
   browserSync.init({
-    server: './'  
+    server: './',
+open: false	
   })
 });
 
