@@ -58,6 +58,11 @@ h1, h2, h3 {
     letter-spacing: 1px;
 }
 
+h1,
+h2 {
+    color: #ffe1ae;
+}
+
 a,
 a:visited {
     color: palette(text, link);
@@ -83,7 +88,6 @@ a:visited {
     @include padding-margin(0, 0 0 6rem);
     text-transform: uppercase;
     font-weight: $font-weight--light;
-    color: palette(text, link);
 }
 
 .h2--large {
@@ -98,4 +102,9 @@ a:visited {
     line-height: $base__line-height;
     @include padding-margin(0, 0 0 3rem 0);
     color: palette(text, primary);
+}
+
+.p--small {
+    @include fontSize(15);
+    @include padding-margin(0, 0 0 1rem 0);
 }
