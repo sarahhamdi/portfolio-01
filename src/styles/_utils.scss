@@ -1,71 +1,55 @@
 // Base Colours
 
 // greys
-$white          : rgba(255, 255, 255, 1.00);
-$grey           : #adadad;
+$white: rgba(255, 255, 255, 1);
+$grey: #adadad;
 
 // shadows
-$text-shadow    : 3px 4px 7px 0px rgba(155, 155, 155, 0.39);
-$box-shadow     : 0 11px 16px 0 rgba(0,0,0,0.4);
-
+$text-shadow: 3px 4px 7px 0px rgba(155, 155, 155, 0.39);
+$box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.4);
 
 // colour schemes - option 1
-$black          : #16101A;
-$koromiko       : rgba(251, 196, 99, 1.00);
-
-// colour schemes - option 2
-// $black          : rgb(21, 17, 92);
-// $koromiko       : rgba(247, 91, 106, 1.00);
-
-// colour schemes - option 3
-// $black          :#5a0000;
-// $koromiko       :#68fdff
-
-//colour schemes - option 4
-// $black          : #16101A;
-// $koromiko       :#919191;
+$black: #16101a;
+$koromiko: rgba(251, 196, 99, 1);
 
 $palettes: (
   // this whole "base" thing is a disaster
-  // don't elete "base"
-  // it is bcause sass map-get does not like variables instead of strings
-  // see issue here from 2014 - https://github.com/sass/libsass/issues/652
-
-  base: (),
+    // don't delete "base"
+    // it is bcause sass map-get does not like variables instead of strings
+    // see issue here from 2014 - https://github.com/sass/libsass/issues/652
+    base: (),
   text: (
-    primary     : $grey,
-    heading     : $koromiko,
-    link        : $white,
-    link-hover  : $grey
+    primary: $grey,
+    heading: $koromiko,
+    link: $white,
+    link-hover: $grey,
   ),
-
   background: (
-    dark        : $black
+    dark: $black,
   )
 );
 
-$zindex-minus1  : -1000;
-$zindex-plus1   : 1000;
-$zindex-2       : 2000;
-$zindex-3       : 3000;
+$zindex-minus1: -1000;
+$zindex-plus1: 1000;
+$zindex-2: 2000;
+$zindex-3: 3000;
 
 // FUNCTIONS
 
 // get colors from maps above
 // https://codepen.io/jakealbaugh/post/using-sass-functions-to-access-complex-variable-maps
-@function palette($palette, $color: 'base') {
+@function palette($palette, $color: "base") {
   $get-palette: map-get($palettes, $palette);
   @return map-get($get-palette, $color);
 }
 
 // MIXINS
 @mixin fontSize($sizeValue) {
-    font-size: $sizeValue * 1px;
-    font-size: ($sizeValue/10) * 1rem;
+  font-size: $sizeValue * 1px;
+  font-size: ($sizeValue/10) * 1rem;
 }
 
-@mixin padding-margin ($padding, $margin) {
-    padding: $padding;
-    margin: $margin;
+@mixin padding-margin($padding, $margin) {
+  padding: $padding;
+  margin: $margin;
 }
-

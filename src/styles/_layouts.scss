@@ -1,19 +1,14 @@
 body {
-	@include padding-margin(0, 0);
-	background: palette(background, dark);
+  @include padding-margin(0, 0);
+  background: palette(background, dark);
 }
 
 .main {
-	@include padding-margin(0 12rem, 12rem auto 6rem auto);
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	&--container_1 {
-		margin-right: 13rem;
-		flex: 1.5;
-	}
-	&--container_2 {
-		margin-top: 10rem;
-		flex: 1;
-	}
+  @include padding-margin(0 12rem, 12rem auto 6rem auto);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  &--container_1 {
+    max-width: 760px;
+  }
 }
